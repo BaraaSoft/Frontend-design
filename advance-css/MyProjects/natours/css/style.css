@@ -113,7 +113,7 @@ body{
     }
 
 }
-
+.btn,
 .btn:link,
 .btn:visited{
     text-transform: uppercase;
@@ -122,10 +122,9 @@ body{
     display: inline-block;
     border-radius: 100px;
     transition: all .2s;
+    position: relative;
     
 }
-
-
 
 .btn:hover{
     transform: translateY(-3px);
@@ -140,3 +139,59 @@ body{
     background-color: #ffffff;
     color: #777;
 }
+
+/* START: Button hover scalling animation */
+
+.btn::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    border-radius: 100px;
+    transition: all .4s;
+}
+
+.btn-white::after{
+ background-color:#fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated{
+    animation-name: btnMoveup;
+    animation-delay: .75s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes btnMoveup {
+    0%{
+        opacity: 0;
+        transform: translateY(30px) 
+    }
+    80%{
+        opacity: .8;
+        transform: translateY(-5px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px) 
+    }
+}
+
+
+
+
+
+/* END: Button hover scalling animation */
+
+
+
+
