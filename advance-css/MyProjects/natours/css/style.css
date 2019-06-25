@@ -31,6 +31,12 @@
     opacity: 1;
     transform: translateX(0px); } }
 
+body {
+  font-family: 'lato',sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #777; }
+
 .text-box {
   position: absolute;
   top: 40%;
@@ -60,17 +66,16 @@
     animation-timing-function: ease-out; }
 
 * {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; }
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
 
 body {
-  font-family: 'lato',sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 30px; }
+  padding: 30px;
+  box-sizing: border-box; }
 
 .header {
   position: relative;
@@ -86,3 +91,76 @@ body {
     left: 40px; }
   .header .logo {
     height: 35px; }
+
+.row {
+  max-width: 114rem;
+  background-color: #0e0c0c;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem )/2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem )/3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem )/4); }
+  .row .col-2-of-3 {
+    width: calc( (2*(100% - 2 * 6rem )/3) + 6rem); }
+  .row .col-2-of-4 {
+    width: calc( (2*(100% - 3 * 6rem )/4) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( (3*(100% - 3 * 6rem )/4) +  2* 6rem); }
+  .row::after {
+    content: "";
+    float: none;
+    display: table; }
+
+.btn {
+  font-size: 1.6rem;
+  /* START: Button hover scalling animation */
+  /* START: Button move up animation */ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 45px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: relative; }
+  .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    /* START: Button hover scalling animation */ }
+    .btn:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0; }
+  .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); }
+  .btn-white {
+    background-color: #fff;
+    color: #777;
+    /* START: Button hover scalling animation */ }
+    .btn-white::after {
+      background-color: #fff; }
+  .btn::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    border-radius: 100px;
+    transition: all .4s; }
+  .btn-animated {
+    animation-name: btnMoveup;
+    animation-delay: .75s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: backwards; }

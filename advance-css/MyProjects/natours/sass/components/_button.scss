@@ -1,4 +1,6 @@
 .btn{
+    font-size: 1.6rem;
+       
     &:link,&:visited{
         text-transform: uppercase;
         text-decoration: none;
@@ -16,6 +18,7 @@
             transform: scaleX(1.4) scaleY(1.6);
             opacity: 0;
         }
+       
     }
     &:active{
         transform: translateY(-1px);
