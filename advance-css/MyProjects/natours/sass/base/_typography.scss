@@ -41,3 +41,35 @@ body{
         animation-timing-function: ease-out;
     }
 }
+
+.heading-secondary{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    // Inline-block prevent the element from occupying 100% of the width.
+    display: inline-block;
+    // making the text color to be gradient
+    background: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+    -webkit-background-clip: text;
+    color:transparent;
+    transition: all .2s;
+    &:hover{
+        transform: skewY(5deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba(#000,.2);
+    }
+}
+
+.heading-tertiary{
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.paragraph{
+    font-size: 1.6rem;
+
+    &:not(&:last-child){
+        margin-bottom: 3rem;
+    }
+
+}
