@@ -9,10 +9,18 @@
     background-image: linear-gradient(to right bottom, rgba($color-primary-light,.8), rgba($color-primary-dark,.8) ),url(../../img/nat-4.jpg);
     background-size: cover;
     background-position: top;
-    //clip-path: polygon(0 15%,60% 0,100% 0,100% 85%,60% 100%,0 100%);
+    
     transform: skewY(-7deg);
-    margin-top: -5rem;
+    margin-top: -10rem;
     & > *{
         transform: skewY(7deg);
     }
+
+    //clip-path: polygon(0 15%,60% 0,100% 0,100% 85%,60% 100%,0 100%);
+}
+
+.section-tours{
+    background-color: $color-background-dark;
+    padding: 25rem 0 50rem;
+    margin-top: -10rem;
 }
