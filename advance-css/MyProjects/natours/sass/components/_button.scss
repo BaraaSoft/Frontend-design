@@ -33,6 +33,14 @@
             background-color:#fff;
         }
     }
+    &-primary{
+        background-color: $color-primary;
+        color: $text-white;
+        /* START: Button hover scalling animation */
+        &::after{
+            background-color: $color-primary;
+        }
+    }
 
     /* START: Button hover scalling animation */
     &::after{

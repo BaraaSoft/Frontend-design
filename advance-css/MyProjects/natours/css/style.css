@@ -101,6 +101,12 @@ body {
 .margin-bottom-sm {
   margin-bottom: 2rem; }
 
+.margin-top-xl {
+  margin-top: 8rem; }
+
+.margin-top-xxl {
+  margin-top: 10rem; }
+
 * {
   margin: 0;
   padding: 0;
@@ -182,6 +188,12 @@ body {
     /* START: Button hover scalling animation */ }
     .btn-white::after {
       background-color: #fff; }
+  .btn-primary {
+    background-color: #55c57a;
+    color: #fff;
+    /* START: Button hover scalling animation */ }
+    .btn-primary::after {
+      background-color: #55c57a; }
   .btn::after {
     content: "";
     position: absolute;
@@ -279,6 +291,7 @@ body {
     left: 0;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
+    overflow: hidden;
     backface-visibility: hidden;
     transition-timing-function: ease; }
     .card-side-front {
@@ -294,11 +307,70 @@ body {
       .card-side-back-3rd {
         background-image: linear-gradient(to right bottom, #81d5fc, #2c82c9); }
   .card:hover .card-side-front {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
     z-index: 0; }
   .card:hover .card-side-back {
     transform: rotateY(0deg);
     z-index: 1; }
+  .card-picture {
+    background-size: cover;
+    background-position: top;
+    height: 23rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen; }
+    .card-picture-1st {
+      background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-5.jpg); }
+    .card-picture-2nd {
+      background-image: linear-gradient(to right bottom, #f0c888, #f38f37), url(../../img/nat-6.jpg); }
+    .card-picture-3rd {
+      background-image: linear-gradient(to right bottom, #81d5fc, #2c82c9), url(../../img/nat-7.jpg); }
+  .card-heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    right: 2rem;
+    top: 12rem;
+    width: 75%;
+    text-align: right; }
+    .card-heading-span {
+      padding: .65rem 3rem;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone; }
+      .card-heading-span-1st {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .card-heading-span-2nd {
+        background-image: linear-gradient(to right bottom, #f0c888, #f38f37); }
+      .card-heading-span-3rd {
+        background-image: linear-gradient(to right bottom, #81d5fc, #2c82c9); }
+  .card-details ul {
+    list-style: none;
+    width: 80%;
+    margin: 0 auto; }
+    .card-details ul li {
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 1rem; }
+      .card-details ul li:not(:last-child) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
+  .card-cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -37.5%);
+    width: 75%; }
+  .card-price-box {
+    color: #fff;
+    text-align: center; }
+  .card-price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase; }
+  .card-price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 8rem; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -317,5 +389,9 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem;
+  padding: 25rem 0 15rem;
   margin-top: -10rem; }
+
+.section-stories {
+  background-color: #f7f7f7;
+  padding: 15rem 0; }
