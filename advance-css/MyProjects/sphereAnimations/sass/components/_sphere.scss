@@ -1,5 +1,41 @@
-.circle{
-    background-color: tomato;
-    width: 15px;
-    height: 15px;
+.stage{
+    width: 30rem;
+    height: 30rem;
+    margin: 0 auto;
+    -webkit-perspective: 120rem;
+    -webkit-perspective-origin: 50% 50%;
+    perspective: 120rem;
+    perspective-origin: 50% 50%;
+}
+
+
+.ball{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+     /*** Bottom sphere shader ***/
+    background:  radial-gradient(circle at 50% 120%, #81e8f6, #76deef 10%, #055194 80%, #062745 100%);
+    &::before{
+       
+        content: "";
+        position: absolute;
+        top:1%;
+        left: 5%;
+        height: 90%;
+        width: 90%;
+         /*** Top sphere shader ***/
+        border-radius: 50%;
+        background: radial-gradient(circle at 50% 0px, #ffffff, rgba(255, 255, 255, 0) 58%);
+        filter: blur(5px);
+        z-index: 2;
+    }
+
+    .shadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%,rgba(0,0,0,.4),rgba(0,0,0,.1) 40%,rgba(0,0,0,0) 50%);
+        transform: rotateX(90deg) translateZ(-15.5rem);
+    }
 }

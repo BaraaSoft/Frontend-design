@@ -1,0 +1,11 @@
+
+ARTICLE TO READ
+
+>> Building progress ring in css
+   https://css-tricks.com/building-progress-ring-quickly/
+
+>> Build ARC PI timer 
+   https://css-tricks.com/css-pie-timer/
+
+>> Build 3D Sphere
+   https://cssanimation.rocks/spheres/
