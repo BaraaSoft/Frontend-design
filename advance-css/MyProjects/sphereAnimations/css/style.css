@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  padding: 30px;
+  box-sizing: border-box; }
+
+.circle {
+  background-color: tomato;
+  width: 15px;
+  height: 15px; }
