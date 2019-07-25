@@ -1,0 +1,33 @@
+.stage-two{
+    margin: 8rem auto;
+}
+
+.progress-ring{
+    display: block;
+    margin: 0 auto;
+    &-circle{
+        stroke-dasharray: 10 20;
+        stroke-width:4;
+        //stroke-dashoffset: 10;
+        fill:transparent;
+        stroke: tomato;
+        
+    }
+}
+
+.stage-three{
+    margin: 4rem auto; 
+    .progress-ring{
+         display: block;
+         margin: 0 auto;
+        &-circle{
+            stroke-dasharray: 120 0;
+            stroke-width:4;
+           stroke-dashoffset: 10;
+            fill:transparent;
+            stroke: tomato;
+        }
+    }
+}
+
+

@@ -59,3 +59,27 @@ body {
     height: 100%;
     background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
     transform: rotateX(90deg) translateZ(-16rem); }
+
+.stage-two {
+  margin: 8rem auto; }
+
+.progress-ring {
+  display: block;
+  margin: 0 auto; }
+  .progress-ring-circle {
+    stroke-dasharray: 10 20;
+    stroke-width: 4;
+    fill: transparent;
+    stroke: tomato; }
+
+.stage-three {
+  margin: 4rem auto; }
+  .stage-three .progress-ring {
+    display: block;
+    margin: 0 auto; }
+    .stage-three .progress-ring-circle {
+      stroke-dasharray: 120 0;
+      stroke-width: 4;
+      stroke-dashoffset: 10;
+      fill: transparent;
+      stroke: tomato; }
