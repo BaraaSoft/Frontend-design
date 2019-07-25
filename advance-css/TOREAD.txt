@@ -9,3 +9,6 @@ ARTICLE TO READ
 
 >> Build 3D Sphere
    https://cssanimation.rocks/spheres/
+
+>> sequence animation with css
+   https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/

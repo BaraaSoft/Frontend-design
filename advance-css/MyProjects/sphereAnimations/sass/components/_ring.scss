@@ -15,18 +15,48 @@
     }
 }
 
+$circumference:3.14 * 2 *52;
+$offset:$circumference - 0.25 * $circumference;
+
+
 .stage-three{
-    margin: 4rem auto; 
+    margin: 8rem auto; 
     .progress-ring{
          display: block;
          margin: 0 auto;
+         transform: rotate(-90deg);
         &-circle{
-            stroke-dasharray: 120 0;
-            stroke-width:4;
-           stroke-dashoffset: 10;
+            stroke-width:10;
+            stroke-linecap: round;
             fill:transparent;
-            stroke: tomato;
+            stroke: url(#gradient);
+         
+            stroke-dasharray:$circumference;
+            stroke-dashoffset: $offset;
+
+            animation-iteration-count: infinite;
+            animation-name: processing;
+            animation-duration: 5s; 
         }
+    }
+}
+
+@keyframes processing{
+    0%{
+       $offset:$circumference - 0.0 * $circumference; 
+       stroke-dashoffset: $offset;
+    }
+    50%{
+         $offset:$circumference - 0.35 * $circumference; 
+         stroke-dashoffset: $offset;
+    }
+    80%{
+        $offset:$circumference - 0.80 * $circumference; 
+        stroke-dashoffset: $offset;
+    }
+    100%{
+        $offset:$circumference - 1 * $circumference; 
+        stroke-dashoffset: $offset;
     }
 }
 

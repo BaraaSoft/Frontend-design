@@ -73,13 +73,28 @@ body {
     stroke: tomato; }
 
 .stage-three {
-  margin: 4rem auto; }
+  margin: 8rem auto; }
   .stage-three .progress-ring {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transform: rotate(-90deg); }
     .stage-three .progress-ring-circle {
-      stroke-dasharray: 120 0;
-      stroke-width: 4;
-      stroke-dashoffset: 10;
+      stroke-width: 10;
+      stroke-linecap: round;
       fill: transparent;
-      stroke: tomato; }
+      stroke: url(#gradient);
+      stroke-dasharray: 326.56;
+      stroke-dashoffset: 244.92;
+      animation-iteration-count: infinite;
+      animation-name: processing;
+      animation-duration: 5s; }
+
+@keyframes processing {
+  0% {
+    stroke-dashoffset: 326.56; }
+  50% {
+    stroke-dashoffset: 212.264; }
+  80% {
+    stroke-dashoffset: 65.312; }
+  100% {
+    stroke-dashoffset: 0; } }
