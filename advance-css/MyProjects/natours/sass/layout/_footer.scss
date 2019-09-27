@@ -1,0 +1,69 @@
+.footer{
+
+    background-color: $color-dark;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    @include clear-fix;
+
+    &-logo-box{
+        text-align: center;
+        margin-bottom: 8rem;
+        
+    }
+
+    &-logo{
+        width: 10rem;
+        height: auto;
+    }
+
+    &-copyright{
+        border-top: 1px solid #7e7e7e;
+        padding-top: 1rem;
+        display: inline-block;
+        width: 90%;
+        float: right;
+    }
+
+    &-navigation{
+        border-top: 1px solid #7e7e7e;
+        padding-top: 1rem;
+        display: inline-block;
+    }
+    &-list{
+        list-style: none;
+        text-align: center;
+       
+    }
+    &-item{
+        display: inline-block;
+        padding: .2rem;
+        border-radius: .4rem;
+        overflow: hidden;
+         background-color: transparent;
+       
+    }
+    &-link{
+        text-decoration: none;
+        color:$color-light-grey;
+        text-transform: uppercase;
+        padding: .8rem;
+        transition: all .2s;
+        box-shadow: 0 5px 20px rgba($color: #7e7e7e, $alpha: 0);
+        display: inline-block;
+        background-color: transparent;
+
+        &:visited{
+            text-decoration: none;
+            color:white;
+        }
+
+        &:hover,
+        &:active{
+            background-color: transparent;
+            color:$color-primary;
+            box-shadow: 0 5px 20px rgba($color: #7e7e7e, $alpha: .2);
+            transform: rotateZ(3deg) rotateY(3deg) scale(1.1);
+        }
+    }
+
+}
