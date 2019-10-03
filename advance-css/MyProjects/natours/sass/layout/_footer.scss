@@ -7,8 +7,7 @@
 
     &-logo-box{
         text-align: center;
-        margin-bottom: 8rem;
-        
+        margin-bottom: 8rem;  
     }
 
     &-logo{
@@ -32,15 +31,13 @@
     &-list{
         list-style: none;
         text-align: center;
-       
     }
     &-item{
         display: inline-block;
         padding: .2rem;
         border-radius: .4rem;
         overflow: hidden;
-         background-color: transparent;
-       
+        background-color: transparent; 
     }
     &-link{
         text-decoration: none;
