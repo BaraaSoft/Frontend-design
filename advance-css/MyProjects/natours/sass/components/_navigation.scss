@@ -1,7 +1,31 @@
 .navigation{
     &-chk{
         display: none;
+
+        &:checked ~ &-background {
+            transform: scale(100);
+        }
+
+        &:not(:checked)  ~ &-background{
+            // transform: scale(100);
+        }
     }
+
+    &-chk:checked ~ &-background{
+        transform: scale(100);
+        
+    }
+     &-chk:checked ~ &-nav{
+         width: 100%;
+        opacity: 1;
+        visibility: visible;
+         
+     }
+
+
+
+
+
     &-btn{
         background-color: $color-bakground-light;
         height: 7rem;
@@ -11,6 +35,8 @@
         right:6rem;
         border-radius: 50%;
         z-index: 20;
+        box-shadow: 0px 10px 10px rgba($color: #000000, $alpha: .2);
+
     }
     &-background{
         height: 6rem;
@@ -21,7 +47,9 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light,$color-primary-dark);
         z-index: 10;
-        transform: scale(100);
+
+         // To Animate
+        transition: all 2s cubic-bezier(.97,.01,.12,.98);
        
     }
     &-nav{
@@ -32,13 +60,19 @@
         left:0;
         z-index: 15;
 
+        
+        // To Animate
+        transition: all 2s cubic-bezier(.97,.01,.12,.98);
+        width: 0px;
+        opacity: 0;
+        visibility: hidden;
+        
 
     }
     &-list{
         position: absolute;
         @include center-div;
         list-style: none;
-
     }
     &-item{
         margin:1rem;
@@ -47,7 +81,6 @@
 
     &-link{
        
-
         &:link,
         &:visited{
             font-size: 3rem;
