@@ -1,0 +1,50 @@
+.tab{
+    @include mx-row;
+    @include clear-fix;
+
+    border-bottom: 1px solid $divider-color-primary;
+    padding-bottom: 1rem;
+    &-content{
+        width: calc((100% - #{$gutter-horizontal} )/2);
+    }
+    
+    &-row{
+        @include mx-row;
+        @include clear-fix();
+        .tab-item{
+            float: left;
+            margin:.5rem 1rem;
+            margin-bottom: 1rem;
+           
+            border-bottom: 3px solid rgba(73, 73, 240, 0);
+            border-radius: 2px;
+            transition: all .2s;
+            &:first-child{
+                padding-left: 0rem;
+                margin-left: 0rem;
+            }
+
+            &:hover,&:active{
+                border-bottom: 3px solid $color-primary;
+            }
+        } 
+    }
+
+    .active{
+       border-bottom: 3px solid $color-primary; 
+    }
+
+    &-right{
+        &>*{
+             display: inline-block;
+        }
+        text-align: right;
+    }
+    &-left{
+        &>*{
+             display: inline-block;
+        }
+         text-align: left;
+    }
+
+}

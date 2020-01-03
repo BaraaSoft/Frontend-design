@@ -1,0 +1,42 @@
+.setup-layout{
+    position: relative;
+    background-color: $background-light;
+    width: 100%;
+    height: 24%;
+
+    /* Just for lighten the background */
+    & > .row:not(:first-child){
+        @extend .background-light;
+        & > *{
+            @extend .background-light;
+        }
+    }
+
+    &-title{
+        width: 30rem;
+        margin-bottom: 2rem;
+        //color:$text-white;
+        color:$text-primary;
+        @extend .header-md;
+        @extend .elevate-1;
+        letter-spacing: .5rem;
+        text-transform: uppercase;
+       //clip-path: polygon(0 0, 79% 0, 75% 100%, 0% 100%);
+
+        padding: .2rem 4rem;
+        padding-right: 1rem;
+        padding-left: 6rem;
+        background-color: #fff; //linear-gradient(to right,$color-primary-dark,$color-primary-light);
+        animation-name: moveInRightSpring;
+        animation-duration: 5s;
+        &.current-step{
+            // animation: moveInRightSpring 8s infinite;
+            // animation-delay:5s;
+             //background-color: $background-light;
+        }
+    }
+}
+
+
+
+

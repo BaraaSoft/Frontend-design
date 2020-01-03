@@ -1,0 +1,12 @@
+/*wizard-layout will set the page theme*/
+.wizard-layout{
+    position: relative;
+    background-image:linear-gradient(to right, rgba( #93a5cf,.4), rgba(#e4efe9,.1)),url(../../img/icons/trianglify.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    clip-path:polygon(0% 0vh, 100% 0vh,100% 30vh,0% 100% );
+}
+

@@ -1,0 +1,201 @@
+.wizard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-44%);
+    height: 70rem; 
+    width: 70%;
+    border-radius: .3rem;
+    box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: .2);
+
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    &-side{
+        flex: 2;
+        background-color: #1d2634;//#1b2532
+        & *{
+            background-color: #1d2634;
+        }
+
+        /* child elements positioning */
+        display: flex;
+        flex-direction: column;
+        &-top{
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &-bottom{
+            flex: 1;
+        }
+
+        &-icon{
+            font-size: 12rem;
+            color: transparent;
+            font-weight: 100;
+            background: linear-gradient(to bottom right,$color-primary-dark,$color-primary-light);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            margin-bottom: 5rem;
+        }
+
+    }
+    &-main{
+        flex: 4;
+
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0.1rem 0rem 1.1rem rgba(#000,1);
+    }
+
+    &-header{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        display: flex;
+        margin: 2rem auto;
+    }
+
+    &-content{
+        align-self: flex-end;
+        flex:1;
+
+    }
+
+    &-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 8rem;
+        background: rgba(#000,.03);
+        margin: 0;
+        padding:0 2rem;
+    }
+
+    .step{
+        width: 3.53rem;
+        
+        &-circle{
+            position: relative;
+            padding: 1rem;
+            z-index: 1;
+            color: rgba($text-primary, 1);
+            font-size: 1.45rem;
+            font-weight: 900;
+            padding-left: .9rem;
+
+            &.step-done{
+                color: $color-on;
+            }
+
+            &::before{
+                color: rgba(#fff,1);
+                content: '\25CF';
+                font-size: 80px;
+
+                position: absolute;
+                top:-5.47rem;//-5.45rem;
+                left:-1.06rem; //-1.06rem;
+                z-index: -1;
+                text-shadow:.2rem .1rem .2rem rgba(#000,.2);
+                -webkit-text-shadow:.2rem .1rem .2rem rgba(#000,.2);
+                -moz-text-shadow:.2rem .1rem .2rem rgba(#000,.2);
+            }
+
+            &::after{
+                color: #cfced8;
+                content: '\25CF';
+                font-size: 100px;
+            
+                position: absolute;
+                top: -7.40rem;
+                left: -1.68rem;
+                z-index: -2;
+             
+            }
+
+        }
+
+        &-desc{
+            text-align: center;
+            color: rgba($text-primary, .75);
+            font-size: 1.1rem;
+            font-weight: 800;
+            margin-left: -1.2rem;
+            &.step-done{
+                color: $color-on;
+            }
+        }
+    }
+
+
+    .step-done{
+        &::after{
+           //color:$color-on; 
+           color:transparent;
+           background: linear-gradient(to bottom right,$color-on,$color-on-light);
+           -webkit-background-clip: text;
+           -moz-background-clip: text;
+           background-clip: text;
+        }
+    }
+
+    .wizard-description{
+        position: relative;
+        padding: 4rem;
+        color: $text-white;
+        line-height: 1.7rem;
+        z-index: 3;
+        &-number{
+            color: rgba($text-white, 0.1) ;
+            border: .5rem solid rgba($text-white, 0.1);
+            background: transparent;
+
+            position: absolute;
+            z-index: 1;
+            top:-4.5rem;
+            left: -.4rem;
+
+            padding: 3.5rem 3rem 3.5rem 3.2rem;
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+
+            font-weight: 400;
+            font-size: 5rem;
+        }
+        
+        & > h2:not(.wizard-description-number) {
+            color: rgba($text-white, 0.8);
+            background: transparent;
+            margin-bottom: 1.5rem;
+            z-index: 3;
+        }
+        & > p{
+            color: rgba($text-white, 0.7) ;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+
+.line-separator{
+    width: 5rem;
+    height: .5rem;
+    background-color: #cfced8;
+    margin-top: 2rem;
+    margin-left: 0;
+    z-index: 1;
+
+    &.step-done{
+        background: linear-gradient(to bottom,$color-on,$color-on-light)
+    }
+}
+
+
+
+

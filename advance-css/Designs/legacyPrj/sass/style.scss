@@ -1,0 +1,10 @@
+@import 'abstracts/variables','abstracts/mixins','abstracts/functions';
+@import 'base/base','base/typography','base/utilities','base/animations';
+@import 'components/button','components/tab',
+'components/cardTable','components/indicator',
+'components/menu-view','components/general-table',
+'components/payroll-dashboard','components/wizard',
+'components/cardSetup';
+@import 'layout/header','layout/grid','layout/listtable',
+'layout/development','layout/wizard-layout','layout/setup-layout';
+@import 'pages/home';

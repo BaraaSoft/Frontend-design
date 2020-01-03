@@ -1,0 +1,90 @@
+// main wizard card
+.card-setup{
+   @extend .elevate-1; 
+   //background: linear-gradient(to bottom, #303248, #303248);
+   //background: #fff;
+   background: linear-gradient(to bottom, #ffffff, #f7f5f5);
+   position: relative;
+   margin: 0rem 1rem;
+   height: 15rem;
+   border-radius: .3rem;
+
+  
+
+   &.current-step{
+       transform: scaleY(1.1);
+       @extend .elevate-2; 
+    //    animation: hoverFocus 5s infinite;;
+    //    animation-duration: 5s;
+    //    animation-timing-function: ease-out;
+   }
+
+   &:hover{
+       @extend .elevate-2; 
+   }
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+   text-align: center;
+   &-icon{
+        background-color: transparent;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        
+        flex: 2;
+        & > i{
+            font-size: 8rem;
+            color: transparent;
+            //background:linear-gradient(to bottom right,$color-primary-light,$color-primary-dark);
+            background:linear-gradient(to bottom right, #aec1c5, #ececec);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+        }
+   }
+   &-title{
+       @extend .header-md;
+       text-transform: capitalize;
+       margin-top: .5rem;
+       flex: 1;
+       background-color: transparent;
+       //color: rgba($color:$text-white, $alpha: .9);
+       color: $text-primary;
+   }
+
+   &-number{
+       background: transparent;
+       position: absolute;
+       font-size: 8rem;
+       //font-weight: 500;
+       //color:#ffffff1c;
+       font-weight: 700;
+       color:#00010212;
+       left: 80%;
+       top:35%;
+   }
+
+   &-state{
+       position: absolute;
+       top:10%;
+       right:5%;
+       background-color: transparent;
+         & > i{
+             font-size: 2.2rem;
+             background-color: transparent;
+         }
+       
+       &.state-done{
+           color: $color-on;
+       }
+       &.state-pending{
+           color: $color-pending;
+       }
+   }
+}

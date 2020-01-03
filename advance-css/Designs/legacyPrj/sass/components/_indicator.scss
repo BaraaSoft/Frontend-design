@@ -1,0 +1,101 @@
+.indicator{
+    background-color:$background-light;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 0;
+    height: 4rem;
+   // min-width: 8rem;
+
+    /** Margin to controll distance from parent container **/
+   
+
+    [class^="status"]{
+        
+        background-color:$background-light;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        /** Margin use to controll distance from light indicator **/
+        //margin-left: -20px;
+        z-index: 0;
+        &::after{
+            content: " ";
+            z-index: 1;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            top: 14px;
+            left: 30px;
+        }
+        &::before{
+            content: " ";
+            z-index: 0;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 100%;
+            top: 11px;
+            left: 27px;
+        }
+    }
+    .status-on{
+           
+        &::after{
+            background-color:$color-on;
+            border: 1px solid rgba($color-on,0);
+            box-shadow: -5px 10px 20px rgba($color-on,0.2);
+        }
+        &::before{
+            background-color:rgba($color-on,0.4); 
+            border: 1px solid rgba($color-on,0);
+            box-shadow: -5px 5px 20px rgba($color-on,0.3);
+        }
+
+    }
+    .status-off{
+           
+        &::after{
+            background-color:$color-off;
+            border: 1px solid rgba($color-off,0);
+            box-shadow: -5px 10px 20px rgba($color-off,0.2);
+        }
+        &::before{
+            background-color:rgba($color-off,0.4); 
+            border: 1px solid rgba($color-off,0);
+            box-shadow: -5px 5px 20px rgba($color-off,0.3);
+        }
+
+    }
+    .status-processing{
+           
+        &::after{
+            background-color:$color-processing;
+            border: 1px solid rgba($color-processing,0);
+            box-shadow: -5px 10px 20px rgba($color-processing,0.2);
+        }
+        &::before{
+            background-color:rgba($color-processing,0.4); 
+            border: 1px solid rgba($color-processing,0);
+            box-shadow: -5px 5px 20px rgba($color-processing,0.3);
+        }
+
+    }
+    .status-pending{
+
+        &::after{
+            background-color:$color-pending;
+            border: 1px solid rgba($color-pending,0);
+            box-shadow: -5px 10px 20px rgba($color-pending,0.2);
+        }
+        &::before{
+            background-color:rgba($color-pending,0.4); 
+            border: 1px solid rgba($color-pending,0);
+            box-shadow: -5px 5px 20px rgba($color-pending,0.3);
+        }
+
+    }
+}
